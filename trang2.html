@@ -8,20 +8,28 @@
     <link rel="stylesheet" href="effect.css">
 </head>
 <body style="background-image: url('img/back2.png') ; background-repeat: no-repeat; background-size: cover;background-position: center; height: 100vh; margin: 0; overflow: hidden;">
-    <div class="frameanh">
-        <a href="trang2.html"><img src="img/linh-hbd.jpg"></a>
-    </div>
-    <audio loop id="bg-audio"><source src="img/audio.mp3" type="audio/mpeg">
+    <audio id="bg-audio" loop autoplay>
+        <source src="img/audio.mp3" type="audio/mpeg">
     </audio>
 
     <script>
-    document.body.addEventListener("click", function () {
-        var audio = document.getElementById("bg-audio");
-        // Nếu trình duyệt chặn phát âm thanh tự động
-        if (audio.paused) {
-        audio.play();
-        }
-    });
+        window.onload = function() {
+            var audio = document.getElementById("bg-audio");
+            var playPromise = audio.play();
+
+            if (playPromise !== undefined) {
+                playPromise.then(function() {
+                }).catch(function(error) {
+                    document.body.addEventListener("click", function() {
+                        audio.play();
+                    }, { once: true }); 
+                });
+            }
+        };
     </script>
+    <div class="frameanh">
+        <a href="trang2.html"><img src="img/linh-hbd.jpg"></a>
+    </div>
+     
 </body>
 </html>
