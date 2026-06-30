@@ -23,7 +23,7 @@
 
 /*Hiệu ứng tim đập*/
 .animated-heart {
-    width: 180px;  
+    width: 250px; 
     height: auto;
     animation: heartbeat 1.5s ease-in-out infinite both;
     cursor: pointer;
@@ -41,6 +41,13 @@
 .frameanh img{
     width: 400px; height: auto;
 }
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+* {
+    box-sizing: border-box;
+}
 /*GIAO DIỆN MẶC ĐỊNH (MÁY TÍNH)*/
 body {
     background-size: cover;
@@ -49,16 +56,23 @@ body {
 
 /* Ảnh bánh kem trên máy tính to hơn */
 .animated-heart {
-    width: 250px; 
     height: auto;
 }
 
 
 /*GIAO DIỆN CHO ĐIỆN THOẠI*/
-@media screen and (max-width: 768px) {
-    
-   /*Ảnh bánh kem thu nhỏ*/
+@media (max-width: 768px) {
+    body {
+        background-size: contain !important;      
+        background-color: #ffccda; 
+    }
+    /*hình bánh kem nhỏ hơn*/
     .animated-heart {
-        width: 140px; 
+        width: 180px;
+    }
+    .frameanh {
+        margin-left: 0 !important; 
+        justify-content: center !important;
+        margin-top: 40% !important; 
     }
 }
