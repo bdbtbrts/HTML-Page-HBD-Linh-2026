@@ -35,12 +35,6 @@
     transform: scale(1.2); 
 }
 
-.frameanh{
-    display:flex; margin-left:350px; margin-top: 86px; 
-}
-.frameanh img{
-    width: 400px; height: auto;
-}
 img, video {
     max-width: 100%;
     height: auto;
@@ -48,7 +42,7 @@ img, video {
 * {
     box-sizing: border-box;
 }
-/*GIAO DIỆN MẶC ĐỊNH (MÁY TÍNH)*/
+/*GIAO DIỆN MẶC ĐỊNH TRANG 1 (MÁY TÍNH)*/
 body {
     background-size: cover;
     background-position: center;
@@ -60,19 +54,41 @@ body {
 }
 
 
-/*GIAO DIỆN CHO ĐIỆN THOẠI*/
+/*GIAO DIỆN TRANG 1 CHO ĐIỆN THOẠI*/
 @media (max-width: 768px) {
     body {
-        background-size: contain !important;      
-        background-color: #ffccda; 
+        background-image: url('img/back1dt.png') !important; 
+         
+        background-size: cover !important;      
+        background-position: center !important;
     }
-    /*hình bánh kem nhỏ hơn*/
+
+    /*hình bánh kem nhỏ*/
     .animated-heart {
         width: 180px;
     }
+
+    /* Căn giữa bánh kem */
     .frameanh {
         margin-left: 0 !important; 
         justify-content: center !important;
-        margin-top: 40% !important; 
+        margin-top: 50% !important;  
+    }
+}
+/* GIAO DIỆN TRANG 2 MẶC ĐỊNH*/
+.bodytrang2 {
+    background-image: url('img/back2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/*GIAO DIỆN TRANG 2 CHO ĐIỆN THOẠI*/
+@media (max-width: 768px) {
+    .body-trang-2 {
+        background-image: url('img/back2-mobile.png') !important; 
     }
 }
