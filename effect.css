@@ -57,7 +57,7 @@ body {
 /*GIAO DIỆN TRANG 1 CHO ĐIỆN THOẠI*/
 @media (max-width: 768px) {
     body {
-        background-image: url('img/back1dt.png') !important; 
+        background-image: url('img/backdt1.png') !important; 
          
         background-size: cover !important;      
         background-position: center !important;
@@ -89,6 +89,6 @@ body {
 /*GIAO DIỆN TRANG 2 CHO ĐIỆN THOẠI*/
 @media (max-width: 768px) {
     .body-trang-2 {
-        background-image: url('img/back2-mobile.png') !important; 
+        background-image: url('img/backdt2.png') !important; 
     }
 }
