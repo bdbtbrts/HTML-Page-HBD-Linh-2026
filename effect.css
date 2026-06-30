@@ -42,15 +42,14 @@ img, video {
 * {
     box-sizing: border-box;
 }
-/*GIAO DIỆN MẶC ĐỊNH TRANG 1 (MÁY TÍNH)*/
-body {
+/*GIAO DIỆN TRANG 1 CHO PC*/
+.bodytrang1 {
+    background-image: url('img/back1.png'); 
     background-size: cover;
     background-position: center;
-}
-
-/* Ảnh bánh kem trên máy tính to hơn */
-.animated-heart {
-    height: auto;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
 
 
@@ -69,13 +68,15 @@ body {
     }
 
     /* Căn giữa bánh kem */
-    .frameanh {
+   .frameanh {
         margin-left: 0 !important; 
-        justify-content: center !important;
-        margin-top: 50% !important;  
+        margin-top: 0 !important;  
+        justify-content: center !important; 
+        height: 100vh !important;  
+        align-items: center !important;  
     }
 }
-/* GIAO DIỆN TRANG 2 MẶC ĐỊNH*/
+/* GIAO DIỆN TRANG 2 MÁY TÍNH*/
 .bodytrang2 {
     background-image: url('img/back2.png');
     background-repeat: no-repeat;
@@ -88,7 +89,7 @@ body {
 
 /*GIAO DIỆN TRANG 2 CHO ĐIỆN THOẠI*/
 @media (max-width: 768px) {
-    .body-trang-2 {
+    .bodytrang2 {
         background-image: url('img/backdt2.png') !important; 
     }
 }
