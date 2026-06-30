@@ -35,7 +35,13 @@
     transform: scale(1.2); 
 }
 
+.frameanh{
+    display:flex; margin-left:330px; margin-top: 86px;
+}
 
+.frameanh img {
+    width: 300px; height: auto;
+}
 /*GIAO DIỆN MẶC ĐỊNH (MÁY TÍNH)*/
 body {
     background-size: cover;
